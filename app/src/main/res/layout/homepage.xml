@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/teal_200">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:textSize="30sp"
+        android:text="Fruit Market"
+        android:layout_margin="20dp"
+        android:textColor="@color/white"/>
+
+    <LinearLayout
+        android:id="@+id/centerLayout"
+        android:gravity="center"
+        android:layout_centerInParent="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="10dp"
+        android:background="@color/white">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/loyaltyId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:inputType="number"
+                android:hint="Loyalty Card ID"/>
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:inputType="textPersonName"
+                android:hint="Seller Name"/>
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/village"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:tooltipText="Select Village"/>
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/weight"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:inputType="number"
+                    android:hint="Weight in Tonnes"/>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:layout_margin="10dp"
+        android:padding="10dp"
+        android:layout_below="@+id/centerLayout">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/grossPriceText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="Gross Price"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/total"
+            android:layout_toRightOf="@+id/grossPriceText"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:gravity="center_horizontal"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/loyaltyMessage"
+            android:layout_below="@+id/grossPriceText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:textColor="@color/teal_700"
+            android:text="Applied loyalty index: 1.12"
+            android:visibility="gone"
+            android:gravity="center_horizontal"/>
+
+    </RelativeLayout>
+
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/sellButton"
+        android:textSize="20sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="10dp"
+        android:text="Sell My Produce"/>
+</RelativeLayout>
